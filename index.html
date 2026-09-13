@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MarketCraft Academy — learn institutional finance through lessons, desk simulations, and knowledge checks."
+    />
+    <title>MarketCraft Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260906-4" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="MarketCraft home">
+          <span class="brand-mark">M</span>
+          <span>MARKETCRAFT<small>ACADEMY</small></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="learn">
+            <span class="nav-icon">⌁</span><span>Learn <small>学习</small></span>
+          </button>
+          <button class="nav-item" data-view="practice">
+            <span class="nav-icon">◫</span><span>Practice <small>练习</small></span>
+          </button>
+          <button class="nav-item" data-view="cfa">
+            <span class="nav-icon">C</span><span>CFA Review <small>考试复习</small></span>
+          </button>
+          <button class="nav-item" data-view="glossary">
+            <span class="nav-icon">≡</span><span>Glossary <small>词汇</small></span>
+          </button>
+          <button class="nav-item" data-view="progress">
+            <span class="nav-icon">↗</span><span>Progress <small>进度</small></span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="daily-goal">
+            <div class="goal-ring" id="goal-ring"><span id="goal-count">0/3</span></div>
+            <div><strong>Daily goal · 每日目标</strong><small>Keep your streak alive · 坚持学习</small></div>
+          </div>
+          <div class="profile">
+            <span class="avatar">RZ</span>
+            <div><strong>Analyst Track</strong><small>Level <span id="profile-level">1</span></small></div>
+            <button class="icon-button" id="reset-button" title="Reset progress">⋮</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="menu-button" id="menu-button" aria-label="Open navigation">☰</button>
+          <div class="market-status"><span></span> LEARNING DESK OPEN · 学习台已开启</div>
+          <div class="top-stats">
+            <span title="Current streak">🔥 <strong id="streak-count">1</strong></span>
+            <span title="Experience points">◆ <strong id="xp-count">0</strong> XP</span>
+            <button class="notification" aria-label="Notifications">●</button>
+          </div>
+        </header>
+
+        <section class="view active" id="learn-view">
+          <div class="hero">
+            <div>
+              <p class="eyebrow">INSTITUTIONAL MARKETS CURRICULUM · 金融市场课程</p>
+              <h1>Build your market instinct.<small>培养你的市场直觉</small></h1>
+              <p>Master the products, risks, and decisions that drive a global investment bank.<span class="zh-line">用简单的中文例子，学习全球投资银行的产品、风险与决策。</span></p>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+              <span class="hero-core">MC</span>
+            </div>
+          </div>
+
+          <section class="continue-card" id="continue-card">
+            <div class="continue-label">CONTINUE LEARNING · 继续学习</div>
+            <div class="continue-main">
+              <div class="lesson-symbol">FX</div>
+              <div class="continue-copy">
+                <span class="module-tag">MACRO · FX CASH</span>
+                <h2 id="continue-title">How an FX Spot Trade Works <small>外汇即期交易怎样运作</small></h2>
+                <div class="progress-track"><span id="continue-progress"></span></div>
+                <small id="continue-meta">Lesson 1 of 4 · 第 1/4 课 · 8 min</small>
+              </div>
+              <button class="primary-button" id="continue-button">Start lesson <span>→</span></button>
+            </div>
+          </section>
+
+          <div class="section-heading">
+            <div><p class="eyebrow">YOUR LEARNING PATH · 学习路线</p><h2>Explore the market desks <small>探索金融市场部门</small></h2></div>
+            <div class="legend"><span><i class="dot complete"></i> Complete</span><span><i class="dot current"></i> In progress</span></div>
+          </div>
+
+          <div class="desk-grid" id="desk-grid"></div>
+
+          <section class="briefing-card">
+            <div>
+              <span class="live-pill">WEEKLY BRIEFING · 每周市场故事</span>
+              <h2>The week the carry trade unwound <small>套利交易逆转的一周</small></h2>
+              <p>Read a market event, connect the asset classes, and make the call from the desk.<span class="zh-line">像侦探一样找线索：一国利率变化，为什么会让汇率、债券和股票一起动？</span></p>
+              <button class="text-button" id="briefing-button">Open case study · 打开案例 →</button>
+            </div>
+            <div class="mini-chart" aria-label="Illustrative market chart">
+              <div class="chart-label"><span>USD/JPY</span><strong>−3.1%</strong></div>
+              <svg viewBox="0 0 320 120" role="img">
+                <path class="chart-area" d="M0,20 C40,25 45,38 80,35 S130,18 160,48 S210,40 230,63 S270,90 320,105 L320,120 L0,120 Z" />
+                <path class="chart-line" d="M0,20 C40,25 45,38 80,35 S130,18 160,48 S210,40 230,63 S270,90 320,105" />
+              </svg>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="practice-view">
+          <div class="page-intro"><p class="eyebrow">TRADING FLOOR SIMULATOR · 交易室模拟</p><h1>Practice under pressure.<small>在挑战中练习</small></h1><p>Apply market knowledge to realistic client and risk scenarios.<span class="zh-line">通过真实但简单的客户故事，练习如何判断风险。</span></p></div>
+          <div class="simulation-grid" id="simulation-grid"></div>
+        </section>
+
+        <section class="view" id="cfa-view">
+          <div class="page-intro cfa-intro">
+            <p class="eyebrow">CFA EXAM REVIEW · CFA 考试复习</p>
+            <h1>Build knowledge by level.<small>按级别建立知识体系</small></h1>
+            <p>Review high-yield concepts using the current CFA Program topic structure.<span class="zh-line">依据 2026 CFA Program 主题结构整理核心复习点，每个知识点都有简单实例与讲解。</span></p>
+          </div>
+          <div class="cfa-toolbar">
+            <div class="cfa-level-tabs" id="cfa-level-tabs" role="tablist" aria-label="CFA exam level"></div>
+            <label class="search-box cfa-search"><span>⌕</span><input id="cfa-search" type="search" placeholder="搜索科目、知识点或公式…" /></label>
+          </div>
+          <div class="cfa-level-summary" id="cfa-level-summary"><div><strong>Loading CFA curriculum…</strong><span>正在载入 CFA 课程内容…</span></div></div>
+          <div class="cfa-topic-grid" id="cfa-topic-grid"><p class="cfa-empty">如果此提示持续显示，请刷新页面以载入最新课程。</p></div>
+          <p class="cfa-note">Based on the 2026 CFA Program topic structure. This independent study aid is not affiliated with or endorsed by CFA Institute and does not replace the official curriculum. · 本复习工具并非 CFA Institute 官方教材或认可产品。</p>
+        </section>
+
+        <section class="view" id="glossary-view">
+          <div class="page-intro"><p class="eyebrow">MARKET LANGUAGE · 市场语言</p><h1>Desk glossary.<small>金融词汇小字典</small></h1><p>Build fluency in the terms used across institutional markets.<span class="zh-line">每个词都有英文解释、中文解释和生活小例子。</span></p></div>
+          <label class="search-box"><span>⌕</span><input id="glossary-search" type="search" placeholder="Search / 搜索术语、产品或风险…" /></label>
+          <div class="glossary-grid" id="glossary-grid"></div>
+        </section>
+
+        <section class="view" id="progress-view">
+          <div class="page-intro"><p class="eyebrow">PERFORMANCE REVIEW · 学习报告</p><h1>Your progress.<small>你的进度</small></h1><p>Track your knowledge across every desk.<span class="zh-line">看看你已经掌握了哪些金融知识。</span></p></div>
+          <div class="metric-grid">
+            <div class="metric-card"><span>TOTAL XP · 总经验值</span><strong id="metric-xp">0</strong><small>Keep building momentum · 继续加油</small></div>
+            <div class="metric-card"><span>LESSONS COMPLETE · 已完成课程</span><strong id="metric-lessons">0</strong><small>Across 6 market desks · 六个市场部门</small></div>
+            <div class="metric-card"><span>KNOWLEDGE SCORE · 知识得分</span><strong id="metric-score">—</strong><small>Average quiz accuracy · 平均正确率</small></div>
+          </div>
+          <div class="progress-panel"><h2>Desk readiness <small>部门知识准备度</small></h2><div id="desk-progress"></div></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="lesson-modal" hidden>
+      <article class="modal lesson-modal" role="dialog" aria-modal="true" aria-labelledby="lesson-title">
+        <button class="modal-close" data-close-modal aria-label="Close">×</button>
+        <div class="modal-step" id="modal-step">CONCEPT 1 OF 3</div>
+        <div id="lesson-content"></div>
+      </article>
+    </div>
+
+    <div class="cfa-study-backdrop" id="cfa-study-modal" hidden>
+      <article class="cfa-study-reader" role="dialog" aria-modal="true" aria-labelledby="cfa-study-title">
+        <button class="modal-close cfa-study-close" data-close-cfa-study aria-label="Close CFA module">×</button>
+        <aside class="cfa-study-sidebar">
+          <div id="cfa-study-meta"></div>
+          <nav class="cfa-study-nav" aria-label="Module sections">
+            <button data-cfa-section="cfa-study-overview">01 · 学习目标</button>
+            <button data-cfa-section="cfa-study-framework">02 · 核心框架</button>
+            <button data-cfa-section="cfa-study-example">03 · 简单实例</button>
+            <button data-cfa-section="cfa-study-check">04 · 知识检查</button>
+          </nav>
+        </aside>
+        <main class="cfa-study-content" id="cfa-study-content"></main>
+      </article>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="cfa-review.js?v=20260906-4"></script>
+    <script src="app.js?v=20260906-4"></script>
+  </body>
+</html>

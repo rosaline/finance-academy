@@ -1,0 +1,9 @@
+services:
+  web:
+    command: python3 -m http.server "$PORT" --bind 0.0.0.0
+    health: /
+    portal:
+      title: MarketCraft Academy
+      description: Interactive finance learning website
+    review: true
+    agent: control
