@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # finance-academy
-a project for learning Finance related lessions
-=======
-# MarketCraft Academy
+
 
 A game-inspired institutional finance learning experience covering FX cash, FX options, rates, credit, commodities, and cross-asset macro.
 
